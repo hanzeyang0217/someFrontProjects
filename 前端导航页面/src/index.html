@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="shortcut icon" href="../src/img/a8luz-nfi8i-001.ico" type="image/x-icon" />
+    <title>小黄鸡的房间</title>
+</head>
+
+<body>
+    <div id="content">
+        <header class="GlobalHeader"></header>
+        <main class="GlobalMain">
+            <!-- 1.LOGO -->
+            <!-- 突然发现俺的东西不需要LOGO -->
+            <!-- 那就用一句名言名句代替吧 -->
+            <div id="LOGO">
+                <div class="logoText">
+                    <input class="logoTextEdit" value="" />
+                </div>
+            </div>
+            <!-- 2.搜索 -->
+            <div id="search">
+                <form action="https://www.google.com/search" method="get" class="searchForm">
+                    <div class="searchBox">
+                        <div class="searchButtonBox">
+                            <div class="searchButton">
+                                <div class="searchButtonIcon">
+                                    <i class="material-icons">
+                                        search
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="searchTextBox">
+                            <input type="search" class="searchTextInput" name="q" placeholder="开启知识的大门叭 骚年"
+                                maxlength="255" autofocus />
+                            <!-- 有时间的话想做一下历史记录 -->
+                        </div>
+                        <div class="searchButtonBoxRight">
+                            <div class="searchButtonRight">
+                                <button type="submit" class="searchButtonIconRight">
+                                    <i class="fab fa-google searchButtonIconRightITag"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 3.标签部分 -->
+            <div id="tag">
+                <div class="tagList">
+                </div>
+        </main>
+        <footer class="GlobalFooter"></footer>
+    </div>
+    <div id="Shape" class="displayNone">
+        <div>
+            <div class="dialog">
+                <div class="dialogTitle">
+                    <span class="dialogTitleText">多一个不多 ！</span>
+                </div>
+                <div class="dialogInput">
+                    <div class="dialogNameBox">
+                        <span class="dialogNameSpan span">Name</span>
+                        <input type="text" tabindex="1" class="dialogNameEdit edit" />
+                    </div>
+                    <div class="dialogURLBox">
+                        <span class="dialogURLSpan span">URL</span>
+                        <input type="text" tabindex="2" class="dialogURLEdit edit" />
+                    </div>
+                </div>
+                <div class="dialogbtns">
+                    <div class="dialogbtnsLeft">
+                        <button class="deleteTagBtn btn" tabindex="4">Delete</button>
+                    </div>
+                    <div class="dialogbtnsRight">
+                        <button class="cancelTagBtn btn" tabindex="5">Cancel</button>
+                        <button class="OKTagBtn btn" tabindex="3">OK</button>
+                        <button class="OKBtn btn" tabindex="3">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../src/js/main.js"></script>
+</body>
+
+</html>

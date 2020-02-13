@@ -1,0 +1,356 @@
+@import url("./reStyle.css");
+@import url("../icons/node_modules/@fortawesome/fontawesome-free/css/all.min.css");
+
+#content {
+  min-height: 100%;
+  min-width: 100%;
+  font-size: 14px;
+  color: rgb(117, 117, 117);
+}
+#content.huimengmeng {
+  opacity: 0.5;
+}
+#content > main {
+  min-width: 100%;
+}
+div {
+  display: flex;
+}
+/* LOGO */
+#LOGO {
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  margin-bottom: 18px;
+  min-width: 100%;
+}
+#LOGO .logoText {
+  height: 56px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#LOGO .logoTextEdit {
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  color: rgb(117, 117, 117);
+  text-align: center;
+}
+/* search */
+#search {
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+}
+#search .searchBox {
+  flex: auto;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  border-radius: 20px;
+}
+#search .searchForm {
+  display: flex;
+  flex: auto;
+  max-width: 590px;
+}
+#search .searchButton,
+#search .searchButtonRight {
+  padding: 7px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  outline: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#search .searchButtonIcon {
+  color: rgb(117, 117, 117);
+}
+
+#search .searchButtonRight:hover {
+  background-color: #3b78e7;
+  color: #fff;
+  cursor: pointer;
+}
+#search .searchButtonIconRight {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+}
+#search .searchButtonIconRightITag::before {
+  font-size: 24px;
+  outline: none;
+}
+#search .searchTextBox {
+  flex: auto;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#search .searchTextInput {
+  flex: auto;
+  line-height: 100%;
+  border: transparent;
+  /* margin-right: 20px; */
+  outline: none;
+  font-size: 14px;
+  color: rgb(117, 117, 117);
+}
+#search .searchTextInput::placeholder {
+  font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+  color: rgb(117, 117, 117);
+  font-size: 14px;
+}
+/* tag */
+#tag {
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+}
+#tag .tagList {
+  flex-wrap: wrap;
+  max-width: 600px;
+  flex: auto;
+}
+#tag .tagListItem {
+  width: 119px;
+  height: 119px;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 450px) {
+  /* 手机的时候感觉还是固定三行比较好
+  不然一个块顶死大小以后 略微的偏差效果就会很差
+  要么这边的值js算出来以后给？
+  啊 搞定了。。
+   */
+  #tag .tagListItem {
+    width: 33%;
+  }
+}
+#tag .tagListItemLink,
+#tag .tagListItemLinkAdd {
+  padding-top: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  flex: auto;
+  padding-bottom: 8px;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+#tag .tagListItemLink:hover,
+#tag .tagListItemLink:focus {
+  background-color: rgba(32, 33, 36, 0.06);
+}
+@media (min-width: 450px) {
+  #tag .tagListItemLink:hover .tagListItemBtn,
+  #tag .tagListItemLink:focus .tagListItemBtn {
+    display: flex;
+  }
+}
+
+@media (max-width: 450px) {
+  #tag .tagListItemBtn {
+    display: flex;
+  }
+}
+#tag .tagListItemLinkAdd:hover {
+  cursor: pointer;
+  background-color: rgba(32, 33, 36, 0.06);
+}
+#tag .tagListItemBox {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#tag .tagListItemImgDiv {
+  justify-content: center;
+  align-items: center;
+}
+#tag .tagListItemImg,
+#tag .tagListItemImgAdd {
+  height: 48px;
+  width: 48px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background-color: rgb(201, 201, 201);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tag .tagListItemImgTRUE {
+  height: 24px;
+  width: 24px;
+}
+#tag .tagListItemText,
+#tag .tagListItemTextAdd {
+  width: 88px;
+  justify-content: center;
+  align-items: center;
+}
+#tag .tagListItemTextSpan,
+#tag .tagListItemTextSpanAdd {
+  line-height: 24px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgb(117, 117, 117);
+}
+#tag .tagListItemBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (min-width: 450px) {
+  #tag .tagListItemBtn {
+    display: none;
+  }
+}
+#tag .editTagBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgb(117, 117, 117);
+  outline: none;
+}
+
+/* 防护罩 */
+#Shape {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  bottom: 0;
+  box-shadow: 0 1px 3px 0 rgba(var(--GG800-rgb), 0.3),
+    0 4px 8px 3px rgba(var(--GG800-rgb), 0.15);
+  margin: auto;
+  min-width: 320px;
+  padding: 16px;
+  top: 0;
+  z-index: 10000;
+  display: flex;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  justify-content: center;
+  align-items: center;
+}
+#Shape.displayNone {
+  display: none;
+}
+/* 对话框 */
+#Shape .dialog {
+  height: 255px;
+  width: 350px;
+  flex-direction: column;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  bottom: 0;
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3),
+    0 4px 8px 3px rgba(60, 64, 67, 0.15);
+  margin: auto;
+  min-width: 320px;
+  padding: 16px;
+  top: 0;
+  z-index: 10000;
+  justify-content: space-evenly;
+}
+#Shape .dialogTitle {
+  justify-content: center;
+  align-items: center;
+}
+
+#Shape .dialogTitleText,
+#Shape .dialogNameSpan,
+#Shape .deleteTagBtn,
+#Shape .cancelTagBtn,
+#Shape .OKTagBtn,
+#Shape .dialogURLSpan {
+  color: rgb(117, 117, 117);
+}
+
+#Shape .dialogTitleText {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+#Shape .edit {
+  color: rgb(117, 117, 117);
+  height: 32px;
+  border-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 1px 8px;
+  background-color: rgb(241, 243, 244);
+  outline: none;
+  caret-color: rgb(26, 115, 232);
+  border-radius: 4px;
+}
+#Shape .edit:focus {
+  border-bottom: #3b78e7 2px solid;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#Shape .span {
+  height: 14px;
+  padding-left: 2px;
+}
+
+#Shape .dialogNameSpan,
+#Shape .dialogURLSpan {
+  font-size: 10px;
+}
+
+#Shape .deleteTagBtn,
+#Shape .cancelTagBtn,
+#Shape .OKTagBtn {
+  background-color: transparent;
+  border: none;
+}
+#Shape .btn {
+  border: rgb(241, 243, 244) 1px solid;
+  height: 32px;
+  padding: 0 16px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+#Shape .btn:hover,
+#Shape .btn:focus {
+  background-color: rgb(241, 243, 244);
+}
+#Shape .cancelTagBtn {
+  margin-right: 8px;
+}
+#Shape .OKTagBtn,
+#Shape .OKBtn {
+  background-color: #3b78e7;
+  color: #fff;
+}
+#Shape .OKTagBtn:hover,
+#Shape .OKTagBtn:focus,
+#Shape .OKBtn:hover,
+#Shape .OKBtn:focus {
+  background-color: #215fd1;
+}
+
+#Shape .dialogInput {
+  flex-direction: column;
+}
+#Shape .dialogNameBox {
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+#Shape .dialogURLBox {
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+#Shape .dialogbtnsLeft {
+  margin-right: auto;
+}
+#Shape .dialogNameEdit {
+}
