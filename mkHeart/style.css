@@ -64,7 +64,7 @@ table {
   min-height: 300px;
 }
 .happy {
-  display: block;
+  display: none;
   color: darkgray;
   padding-top: 10px;
   justify-content: center; /* 子要素をflexboxにより中央に配置する */
