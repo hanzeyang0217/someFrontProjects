@@ -103,7 +103,7 @@ addHTML.onclick = () => {
 };
 addPage.onclick = () => {
   if (!pageIndex) {
-    pageIndex = 0;
+    pageIndex = 1;
   }
   const maxPageIndex = 1;
   const httpRequest = new XMLHttpRequest();
@@ -118,7 +118,7 @@ addPage.onclick = () => {
             let id = item.id;
             let text = item.text;
             let liEle = document.createElement(`li`);
-            console.log(liEle);
+            // console.log(liEle);
             liEle.innerText = text;
             liEle.id = id;
             list.appendChild(liEle);

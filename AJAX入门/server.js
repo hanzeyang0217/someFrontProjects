@@ -28,7 +28,21 @@ var server = http.createServer(function(request, response) {
     response.setHeader("Content-Type", "text/html;charset=utf-8");
     // response.write(`hello`);
     let HTMLString = fs.readFileSync("./public/index.html").toString();
-    response.write(HTMLString);
+    let dataLi = JSON.parse(
+      fs.readFileSync(`./public/DB/data0.JSON`).toString()
+    );
+    let page1 = ``;
+    dataLi.forEach(li => {
+      page1 += `<li id=${li.id}>${li.text}</li>`;
+    });
+    console.log(page1);
+    let dataHTML = HTMLString.replace(
+      `{{page1}}`,
+      `<ul id="list">
+        ${page1}
+        </ul>`
+    );
+    response.write(dataHTML);
     response.end();
   } else if (path === "/Async/AsyncHTML.HTML") {
     response.statusCode = 200;

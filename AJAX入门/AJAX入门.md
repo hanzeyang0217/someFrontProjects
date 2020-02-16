@@ -46,6 +46,8 @@
 3. 加载 HTML => done
 4. 加载 XML => done
 5. 加载 JSON => done
+6. 加载分页 => done
+   1. 首版后台数据操作
 
 ### 四个步骤
 
@@ -70,14 +72,6 @@
 # 继续随便写
 
 - contentType 有两种可以写 application 或者 text JSON
-
-# 加载分页
-
-- AJAX 的经典案例
-- page1 的操作好骚呀 HTML 先占位 用{{}}
-- 服务器上直接 replace 换成数据
-- 然后拿到的数据 转换成数组 map 加工到标签 然后替换 ww 列表就出来了
-- 好古老好有趣
 
 # 到时候去看看
 
