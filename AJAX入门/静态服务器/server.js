@@ -23,11 +23,9 @@ var server = http.createServer(function (request, response) {
   /******** 从这里开始看，上面不要看 ************/
   console.log("官人来啦 需要啥服务？" + parsedUrl.pathname);
 
-  path = path === "/" ? "index.HTML" : path;
-  // path = (path[0] === '.') ? 'index.HTML' : path;
-  console.log(path);
+  path = path === "/" ? "index.html" : path;
   const index = path.lastIndexOf(".");
-  const typeStr = path.substr(index);
+  const typeStr = path.substring(index);
   const ContentType = typeStr.toLowerCase() || `.html`;
   const ContentTypes = {
     ".html": "text/html", //文本4兄弟 一个已经换爸爸了
@@ -57,20 +55,16 @@ var server = http.createServer(function (request, response) {
     "Content-Type",
     `${ContentTypes[ContentType]};charset=utf-8`
   );
+  let string;
   try {
-    console.log(path);
-    // console.log(fs.readFileSync(`./public/${path}`).toString())
-    let string = fs.readFileSync(`./public/${path}`).toString();
+    string = fs.readFileSync(`./public/${path}`).toString();
     response.statusCode = 200;
-    response.write(string);
-    response.end();
   } catch (error) {
+    string = `大哥你走错房间了..`;
     response.statusCode = 404;
-    response.setHeader("Content-Type", "text/html;charset=utf-8");
-    response.write(`大哥你走错房间了..`);
-    response.end();
   }
-
+  response.write(string);
+  response.end();
   /******** 代码结束，下面不要看 ************/
 });
 
