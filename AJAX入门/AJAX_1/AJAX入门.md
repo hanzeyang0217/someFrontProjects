@@ -75,5 +75,5 @@
 
 # 到时候去看看
 
-- IWServer.js
-- IWAjax,js
+- IWServer.pas
+- IWAjax.js

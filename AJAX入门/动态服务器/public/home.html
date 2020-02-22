@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+</head>
+
+<body>
+    <h1>HomePage</h1>
+    <span>ID {{userID}} </span>
+    <span>Name {{userName}} </span>
+    <button id="logout">Logout</button>
+    <script>
+        logout.onclick = () => {
+            const XHR = new XMLHttpRequest()
+            XHR.open(`POST`, `./logout`, true)
+            XHR.send()
+            XHR.onreadystatechange = () => {
+                if (XHR.readyState === 4) {
+                    if (XHR.status === 200) {
+                        // console.log(`亲 好评`);
+                        const URLStr = XHR.response;
+                        // console.log(URLStr);
+                        location.href = URLStr;
+                        // location = URLStr;
+                        // window.open(URLStr);
+                        // window.open();
+                    } else {
+                        const m = XHR.response;
+                        window.alert(m);
+                        // console.log(`货是送到了 但是东西貌似有问题`);
+                    }
+                } else {
+                    // console.log(`快递还木有到`);
+                }
+            };
+        };
+    </script>
+</body>
+
+</html>
