@@ -1,0 +1,133 @@
+h1 {
+  color: green;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input,
+button {
+  font-family: inherit;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.mainDiv > div {
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+.leftDiv {
+  /* min-height: 300px; */
+  min-height: 300px;
+  min-width: 300px;
+  max-height: 300px;
+  color: gray;
+  /* max-width: 400px; */
+
+  overflow: auto;
+}
+.rightDiv {
+  min-height: 300px;
+  min-width: 300px;
+}
+@media screen and (min-width: 600px) {
+  .mainDiv {
+    flex-direction: row;
+  }
+}
+@media screen and (min-height: 600px) {
+  .leftDiv {
+    max-height: 500px;
+  }
+}
+.xxx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  min-height: 300px;
+}
+.happy {
+  display: none;
+  color: darkgray;
+  padding-top: 10px;
+  justify-content: center; /* 子要素をflexboxにより中央に配置する */
+  align-items: center; /* 子要素をflexboxにより中央に配置する */
+  font-family: fantasy;
+  font-size: 24px;
+  transition: all 2s ease-in-out 0.5s;
+}
+.happy > div {
+  display: none;
+}
+
+/* .xxx div {
+  display: flex;
+}
+
+.heart {
+  flex-direction: column;
+  transition: all 0.8s ease-in-out;
+}
+
+.left,
+.right,
+.body {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(230, 59, 87);
+}
+
+.top {
+  display: flex;
+}
+
+.bottom {
+  justify-content: center;
+}
+
+.left,
+.right {
+  border-radius: 50%;
+}
+
+.left {
+  transform: rotate(45deg) translate(35px, 15px);
+}
+
+.right {
+  transform: rotate(45deg) translate(15px, 35px);
+}
+
+.body {
+  transform: rotate(45deg) translate(-20px, -20px);
+}
+
+@keyframes bengbengbeng {
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.heart {
+  animation: 0.8s infinite ease-in-out bengbengbeng;
+} */
