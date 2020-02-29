@@ -22,27 +22,10 @@ window.$ = {
               reject.call(null, httpRequest, httpRequest.status);
             }
           } else {
-            //   console.log(httpRequest.readyState);
           }
-        };
-        return {
-          // success(fn) {
-          //   httpRequest.onreadystatechange = () => {
-          //     if (httpRequest.readyState === 4) {
-          //       if (httpRequest.status === 200) {
-          //         fn(httpRequest.response);
-          //       } else {
-          //         const m = httpRequest.response;
-          //         window.alert(m);
-          //       }
-          //     } else {
-          //     }
-          //   };
-          // }
         };
       });
     } else {
-      //default setting
     }
   }
 };
