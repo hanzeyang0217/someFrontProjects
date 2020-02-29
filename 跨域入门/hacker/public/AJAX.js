@@ -6,13 +6,15 @@ window.$ = {
         const url = obj.url || "/";
         const async = !!obj.async || true;
         const contentType = obj.contentType || "text/html; charset=utf-8";
-        const cache = obj.cache || "no-cache ";
+        const cache = obj.cache;
         const data = obj.data;
         const httpRequest = new XMLHttpRequest();
         httpRequest.open(method, url, async);
 
         httpRequest.setRequestHeader("Content-type", contentType);
-        httpRequest.setRequestHeader("Cache-control", cache);
+        if (cache) {
+          httpRequest.setRequestHeader("Cache-control", cache);
+        }
         httpRequest.send(data);
         httpRequest.onreadystatechange = () => {
           if (httpRequest.readyState === 4) {

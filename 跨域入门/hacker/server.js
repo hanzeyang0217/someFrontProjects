@@ -53,8 +53,8 @@ var server = http.createServer(function(request, response) {
     ".mp4": "video/mp4" //视频2兄弟 mp4去哪儿了。。。
     // ".xhtml+xml": "application/xhtml+xml", //现在基本不再使用（HTML5统一了这些格式）
   };
-  const registerUserStr =
-    fs.readFileSync(`./public/DB/registerUser.JSON`).toString() || "[]";
+  const registerUserStr = `[]`;
+  // fs.readFileSync(`./public/DB/registerUser.JSON`).toString() || "[]";
   response.setHeader(
     "Content-Type",
     `${ContentTypes[ContentType]};charset=utf-8`

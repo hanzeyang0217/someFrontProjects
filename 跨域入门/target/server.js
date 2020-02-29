@@ -224,18 +224,21 @@ var server = http.createServer(function(request, response) {
     const callBack = parsedUrl.query.callback.toString();
     //也可以用过referer检查来减少JSONP的安全风险
     console.log(JSON.stringify(request.headers[`referer`]));
-    const string1 = "window[`{{dataJS}}`]({{data}});";
+    const string1 = "window[`{{callBack}}`]({{data}});";
     const data = fs.readFileSync(`./public/DB/registerUser.JSON`).toString();
     const string2 = string1.replace(`{{data}}`, data);
-    const string3 = string2.replace(`{{dataJS}}`, callBack);
+    const string3 = string2.replace(`{{callBack}}`, callBack);
     //啊哈哈哈 垃圾代码 俺偷懒了w
     response.write(string3);
     response.end();
   } else {
     try {
       //允许跨域
-      // response.setHeader("Access-Control-Allow-Origin", "http://localhost:8888");
-      // response.setHeader("Access-Control-Allow-Origin", "*");
+      // response.setHeader(
+      //   "Access-Control-Allow-Origin",
+      //   "http://localhost:8888"
+      // );
+      response.setHeader("Access-Control-Allow-Origin", "*");
       let string = fs.readFileSync(`./public/${path}`).toString();
       response.statusCode = 200;
       response.write(string);
