@@ -1,3 +1,8 @@
+## TODO
+
+- 阅读[promise A+规范](https://promisesaplus.com/)
+- `手写promise`
+
 ## 前言
 
 - 没怎么深挖
