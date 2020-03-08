@@ -1,0 +1,18 @@
+#box > #section2 {
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+}
+#section2 .up {
+  display: flex;
+}
+
+#section2 .down {
+  border: 1px solid black;
+}
+.down .active {
+  display: block;
+}
+.down div {
+  display: none;
+}

@@ -1,0 +1,13 @@
+body {
+  overflow: hidden;
+}
+#box {
+  display: flex;
+  flex-wrap: wrap;
+}
+#box > section {
+  border: 1px green solid;
+  width: 50vw;
+  height: 50vh;
+  box-sizing: border-box;
+}

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+  font-size: 14px;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+input,
+button {
+  font-family: inherit;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#box {
+  display: flex;
+  flex-wrap: wrap;
+}
+#box > section {
+  border: 1px green solid;
+  width: 50vw;
+  height: 50vh;
+  box-sizing: border-box;
+}
+
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */
