@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{13:function(n){n.exports=JSON.parse('[{"user":"yang","id":"yang","PW":"yang"},{"user":"yang","id":"yang","PW":"yang"},{"user":"yang","id":"yang","PW":"yang"}]')}}]);
