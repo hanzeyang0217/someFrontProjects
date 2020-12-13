@@ -1,12 +1,5 @@
 # Description
 Some Demos
-# 预览方式
-https://hanzeyang0217.github.io/someFrontProjects/ 加路径
-
-## AJAX
-- [simple AJAX](https://hanzeyang0217.github.io/someFrontProjects/AJAX%E5%85%A5%E9%97%A8/%E5%B0%81%E8%A3%85AJAX_XHR_NonPromise/public/index.HTML)
-- [use](https://github.com/hanzeyang0217/someFrontProjects/blob/master/AJAX%E5%85%A5%E9%97%A8/%E5%B0%81%E8%A3%85AJAX_XHR_NonPromise/public/main.js)
-- [code](https://github.com/hanzeyang0217/someFrontProjects/blob/master/AJAX%E5%85%A5%E9%97%A8/%E5%B0%81%E8%A3%85AJAX_XHR_NonPromise/public/AJAX.js)
 ## draw a heart
 - [draw a heart](https://hanzeyang0217.github.io/someFrontProjects/mkHeart/)
 - [code](https://github.com/hanzeyang0217/someFrontProjects/blob/master/mkHeart/main.js)
