@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>查找文件</title>
+    <style>
+      .jiushini {
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input id="edit" type="text" value="a2" />
+    <button id="btn">click</button>
+    <span id="label"></span>
+    <div>
+      C
+      <ol id="box">
+        <li title="apple">
+          apple
+          <ol>
+            <li title="a1">a1</li>
+            <li title="a2">a2</li>
+          </ol>
+        </li>
+        <li title="banana">banana</li>
+        <li title="orange">
+          orange
+          <ol>
+            <li title="a1">a1</li>
+            <li title="a2">a2</li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+
+    <script>
+      const btn = document.getElementById("btn");
+      const box = document.getElementById("box");
+      const edit = document.getElementById("edit");
+      const find = (key, d) => {
+        if (key === d.title) {
+          return d;
+        } else {
+          for (let i = 0; i < d.children.length; i++) {
+            const ele = find(key, d.children[i]);
+            if (ele) return ele;
+          }
+        }
+        return false;
+      };
+      const click = btn.addEventListener(
+        "click",
+        () => {
+          const old = document.querySelector(".jiushini");
+          if (old) old.classList.remove("jiushini");
+          const tar = find(edit.value, box);
+          if (tar) tar.classList.add("jiushini");
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
